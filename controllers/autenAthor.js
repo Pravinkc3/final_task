@@ -9,7 +9,7 @@ async function authandicate(req,res,next){
             res.status(401).send('Access Denied')
         }
         try {
-        const decoded = jwt.verify(token, process.env.TOKEN_SEC);
+        const decoded = jwt.verify(token, process.env.SECRET_KEY);
         req.userMail = decoded ;
 
         console.log("decoded:",decoded);

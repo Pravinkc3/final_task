@@ -64,6 +64,7 @@ async function deleteBookById(req,res){
     .json({
          response
         })
+
     } catch (err) {
         throw err ;
     }
